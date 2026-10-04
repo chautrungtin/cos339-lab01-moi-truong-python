@@ -32,6 +32,5 @@ https://github.com/chautrungtin/cos339-lab01-moi-truong-python
 git clone https://github.com/chautrungtin/cos339-lab01-moi-truong-python.git
 ```
 
-Repository GitHub hiện lưu README khởi tạo. Các file chạy thử và cấu hình
-bổ sung nằm trong ZIP nộp kèm, chưa được push lên GitHub.
-Chỉ thực hiện Bài thực hành 01 ở trang 39 của slide COS339 Bài 1.
+Mã nguồn gồm chương trình hello, kiểm tra môi trường và cấu hình VS Code.
+Phần thiết lập môi trường thực hiện theo mục 1.6.1 của ghi chú buổi 20/09/2026.
