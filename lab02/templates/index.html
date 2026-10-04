@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Thực hành mã hóa | Châu Trung Tín</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main>
+<header><p class="eyebrow">BÀI 02 · THỰC HÀNH BẢO MẬT THÔNG TIN</p><h1>Mã hóa và giải mã</h1><p>Châu Trung Tín <span>·</span> 2410060248</p></header>
+<div class="layout"><section class="panel"><h2>Nhập dữ liệu</h2>
+<form method="post">
+<div class="row"><label>Thuật toán<select name="algorithm">{% for value, label in [('caesar','Caesar'),('playfair','Playfair')] %}<option value="{{ value }}" {% if values.algorithm == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+<label>Thao tác<select name="operation">{% for value, label in [('encrypt','Mã hóa'),('decrypt','Giải mã')] %}<option value="{{ value }}" {% if values.operation == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label></div>
+<label>Khóa<input name="key" value="{{ values.key }}" required><small>Caesar: số nguyên. Playfair: từ khóa chứa chữ A–Z.</small></label>
+<label>Nội dung<textarea name="text" rows="5" required>{{ values.text }}</textarea></label>
+<button type="submit">Thực hiện →</button>
+</form></section>
+<section class="panel output"><h2>Kết quả</h2>
+{% if error %}<p class="error" role="alert">{{ error }}</p>{% elif result is not none %}<p class="badge">{{ 'CAESAR' if values.algorithm == 'caesar' else 'PLAYFAIR' }} · {{ 'MÃ HÓA' if values.operation == 'encrypt' else 'GIẢI MÃ' }}</p><pre id="result">{{ result }}</pre>{% else %}<p class="muted">Chọn thuật toán, nhập khóa và nội dung để bắt đầu.</p>{% endif %}
+{% if square %}<h3>Ma trận khóa 5 × 5</h3><table aria-label="Ma trận Playfair"><tbody>{% for row in square %}<tr>{% for c in row %}<td>{{ c }}</td>{% endfor %}</tr>{% endfor %}</tbody></table>{% endif %}
+{% if prepared %}<h3>Bản rõ sau khi chuẩn hóa</h3><p class="mono">{{ prepared }}</p>{% endif %}
+</section></div>
+<footer><h3>Quy ước thực hành</h3><p><b>Caesar</b> dịch vòng chữ A–Z và a–z, giữ nguyên các ký tự khác.</p><p><b>Playfair</b> dùng A–Z, gộp J vào I, bỏ khoảng trắng và ký tự ngoài bảng chữ cái. Thêm X khi cần; dùng Q nếu ký tự đang xét là X. Giải mã giữ nguyên ký tự đệm.</p><p class="muted">Hai thuật toán cổ điển dùng để học nguyên lý mã hóa, không dùng bảo vệ dữ liệu thực tế.</p></footer>
+</main></body></html>
