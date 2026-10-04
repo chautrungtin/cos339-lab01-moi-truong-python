@@ -1,0 +1,17 @@
+test_cau_truc (test_lab01.PythonTests.test_cau_truc) ... ok
+test_day_va_chuoi (test_lab01.PythonTests.test_day_va_chuoi) ... ok
+test_quan_ly (test_lab01.PythonTests.test_quan_ly) ... ok
+test_so_hoc (test_lab01.PythonTests.test_so_hoc) ... ok
+test_caesar_roundtrip (test_lab02.CipherTests.test_caesar_roundtrip) ... ok
+test_caesar_vector (test_lab02.CipherTests.test_caesar_vector) ... ok
+test_flask_get_and_encrypt (test_lab02.CipherTests.test_flask_get_and_encrypt) ... ok
+test_flask_playfair_and_error (test_lab02.CipherTests.test_flask_playfair_and_error) ... ok
+test_html_escaping (test_lab02.CipherTests.test_html_escaping) ... ok
+test_playfair_invalid (test_lab02.CipherTests.test_playfair_invalid) ... ok
+test_playfair_repeated_and_padding (test_lab02.CipherTests.test_playfair_repeated_and_padding) ... ok
+test_playfair_vector (test_lab02.CipherTests.test_playfair_vector) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.033s
+
+OK
