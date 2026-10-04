@@ -34,3 +34,19 @@ git clone https://github.com/chautrungtin/cos339-lab01-moi-truong-python.git
 
 Mã nguồn gồm chương trình hello, kiểm tra môi trường và cấu hình VS Code.
 Phần thiết lập môi trường thực hiện theo mục 1.6.1 của ghi chú buổi 20/09/2026.
+
+## Bài 01 theo ghi chú ngày 20/09/2026
+
+Các ví dụ mục 1.6.2 và 1.6.3 minh họa các chủ đề được giao.
+
+```sh
+python lab01/ex02/python_co_ban.py
+python lab01/ex03/cau_truc_du_lieu.py
+python lab01/ex04/quan_ly_sinh_vien.py
+python -m unittest discover -s tests -v
+```
+
+- 1.6.2: 10 ví dụ về số học, điều kiện, vòng lặp, hàm và chuỗi.
+- 1.6.3: 5 ví dụ List, Tuple, Dictionary.
+- 1.6.4: lớp SinhVien và QuanLySinhVien; thêm, tìm, sửa, xóa, sắp xếp.
+- Dữ liệu điểm và sinh viên bổ sung là dữ liệu minh họa.
